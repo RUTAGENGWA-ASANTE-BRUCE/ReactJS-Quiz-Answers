@@ -8,10 +8,8 @@ function App() {
     fetch("https://api.datamuse.com/words?rel_rhy=" + searchValue.current.value)
       .then((res) => res.json())
       .then((data) => {
-        console.log("response", data);
         setRhymeWords(data);
       });
-    console.log("the array: ", rhymeWords);
   };
 
   const searchValue = useRef(null);
